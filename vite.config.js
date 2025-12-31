@@ -4,5 +4,5 @@ import { base } from 'framer-motion/client'
 
 export default defineConfig({
   plugins: [react()],
-  base : "/janshia-porfolio"
+  base : "/janishia-portfolio"
 })

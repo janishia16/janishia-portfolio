@@ -3,7 +3,7 @@ import { PersonalInfo } from '../types';
 export const personalInfo: PersonalInfo = {
   id: 1,
   name: 'Janishia Noronha',
-  title: 'Programmer Analyst',
+  title: 'Software Engineer',
   email: 'janinorohna@gmail.com',
   phone: '+91-8105965001',
   location: 'Mangalore, Belman',
