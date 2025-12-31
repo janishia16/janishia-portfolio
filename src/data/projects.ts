@@ -38,7 +38,7 @@ export const projects: Project[] = [
     ],
     technologies: getSkillsByNames(['Python', 'Machine Learning']),
     start_date: '2023-01-01',
-    end_date: '2023-06-30',
+    end_date: '2024-03-30',
     is_featured: true,
     order: 2,
     created_at: '2024-01-01T00:00:00Z',
