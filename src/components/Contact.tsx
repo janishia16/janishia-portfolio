@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { ContactMessage } from '../types';
 import { portfolioAPI } from '../services/api';
 
@@ -58,12 +58,6 @@ const Contact: React.FC = () => {
       label: 'Email',
       value: 'janinorohna@gmail.com',
       href: 'mailto:your.email@example.com',
-    },
-    {
-      icon: <Phone className="w-6 h-6" />,
-      label: 'Phone',
-      value: '+91-8105965001',
-      href: 'tel:+15551234567',
     },
     {
       icon: <MapPin className="w-6 h-6" />,
@@ -153,8 +147,7 @@ const Contact: React.FC = () => {
                   Response Time
                 </h4>
                 <p className="text-gray-600">
-                  I typically respond to messages within 24 hours. For urgent matters, 
-                  please feel free to call me directly.
+                  I typically respond to messages within 24 hours.
                 </p>
               </motion.div>
             </motion.div>
