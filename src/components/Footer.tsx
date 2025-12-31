@@ -30,7 +30,6 @@ const Footer: React.FC = () => {
                 { label: 'Skills', href: '#skills' },
                 { label: 'Projects', href: '#projects' },
                 { label: 'Experience', href: '#experience' },
-                { label: 'Contact', href: '#contact' },
               ].map((link) => (
                 <a
                   key={link.href}
@@ -54,7 +53,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Let's Connect</h4>
             <p className="text-gray-400 mb-4">
-              Follow me on social media or send me an email
+              Follow me or send me an email
             </p>
             <div className="flex space-x-4">
               <a

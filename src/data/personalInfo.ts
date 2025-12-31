@@ -5,7 +5,6 @@ export const personalInfo: PersonalInfo = {
   name: 'Janishia Noronha',
   title: 'Software Engineer',
   email: 'janinorohna@gmail.com',
-  phone: '+91-8105965001',
   location: 'Mangalore, Belman',
   bio: `I'm a passionate Computer Science Engineer and Full-Stack Developer currently working at Cognizant Technology Solutions. I specialize in Python, Java, Django, React, and Spring Boot technologies. With strong experience in database management, data analysis, and software development, I enjoy creating scalable applications and solving complex problems. I have hands-on experience with tools like Tableau, PostgreSQL, and various development frameworks. I'm always eager to learn new technologies and contribute to innovative projects.`,
   profile_image: 'https://raw.githubusercontent.com/janishia16/Images/main/IMG_8100.jpeg', 
