@@ -1,4 +1,5 @@
 // Static API service - no backend required!
+import emailjs from '@emailjs/browser';
 import { 
   PersonalInfo, 
   Skill, 
@@ -65,19 +66,30 @@ export const portfolioAPI = {
     return simulateAsyncCall(certifications);
   },
 
-  // Contact - For now, just log the message (you can integrate with a service like Formspree, Netlify Forms, etc.)
   sendContactMessage: async (message: ContactMessage): Promise<{ message: string }> => {
-    console.log('Contact form submission:', message);
-    
-    // You can integrate with services like:
-    // - Formspree: https://formspree.io/
-    // - Netlify Forms: https://www.netlify.com/products/forms/
-    // - EmailJS: https://www.emailjs.com/
-    // - Or any other form handling service
-    
-    return simulateAsyncCall(
-      { message: 'Thank you for your message! I\'ll get back to you soon.' },
-      500
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey ||
+        serviceId === 'YOUR_SERVICE_ID' ||
+        templateId === 'YOUR_TEMPLATE_ID' ||
+        publicKey === 'YOUR_PUBLIC_KEY') {
+      throw new Error('EmailJS credentials are not configured.');
+    }
+
+    await emailjs.send(
+      serviceId,
+      templateId,
+      {
+        from_name: message.name,
+        from_email: message.email,
+        subject: message.subject,
+        message: message.message,
+      },
+      publicKey
     );
+
+    return { message: "Thank you for your message! I'll get back to you soon." };
   },
 };
